@@ -16,22 +16,27 @@ export default function Profile() {
   }
 
   return (
-    <section className='w-full'>
-      <h1 className='head_text text-center'>
-        <span className='blue_gradient'>Profile</span>
-      </h1>
+      <div className="w-full min-h-screen flex items-center justify-center">
+  <div className="bg-[#2e2e2e] border border-blue-500 rounded-xl p-8 shadow-lg flex flex-col items-center space-y-4">
 
-      <div className='profileContainer'>
-        <div className='profileCard'>
-          <img id="profile-photo" src={session.user.image} alt="Profile Photo" className='profilePhoto' draggable={false}/>
-          <div className='profileDetails'>
-            <h2>{session.user.name}</h2>
-            <p><strong>Course:</strong>B.Tech</p>
-            <p><strong>Email ID:</strong> {session.user.email}</p>
-            <p><strong>Hostel:</strong>C V Raman</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    {/* Profile Image */}
+    <img
+      src={session.user.image}
+      alt="Profile"
+      className="w-28 h-28 rounded-full object-cover border-2 border-blue-400"
+      draggable={false}
+    />
+
+    {/* Profile Details */}
+    <div className="text-center text-white space-y-2">
+      <h2 className="text-xl font-semibold text-blue-400">{session.user.name}</h2>
+      <p><span className="text-gray-300 font-medium">Course:</span> B.Tech</p>
+      <p><span className="text-gray-300 font-medium">Email ID:</span> {session.user.email}</p>
+      <p><span className="text-gray-300 font-medium">Hostel:</span> C V Raman</p>
+    </div>
+
+  </div>
+</div>
+
   );
 }
