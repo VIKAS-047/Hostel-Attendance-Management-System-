@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react';
 
 export default function Profile() {
   const { data: session } = useSession();
-
-
   if (!session) {
     return (
       <div className="not-signed-in">
