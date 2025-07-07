@@ -6,7 +6,7 @@ Our project is a comprehensive web application designed to accurately log the ar
 
 ## Installation
 
-1. **Clone the repository:**
+1. **Clone the repository :**
 
     ```sh
     git clone https://github.com/maripaba2/Web8_IITISOC24.git
